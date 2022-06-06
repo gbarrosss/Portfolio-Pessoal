@@ -436,10 +436,27 @@ span {
   flex-direction: row;
 }
 
+.projetos{
+  height: 120vh;
+}
+
+
 .projetos-lista {
   width: 280px;
   height: 200px;
 }
+
+.projetos-lista img {
+  margin-bottom: 10px;
+}
+
+.projetos-lista:hover img {
+  filter: brightness(100%);
+ }
+
+ .projetos-lista:hover dd {
+  display: none;
+ }
 
 .contato {
   grid-template-columns: 1fr 1fr auto auto;
@@ -536,9 +553,6 @@ span {
     font-size: 12px;
   }
 
-.projetos{
-  height: 120vh;
-}
 
   .projetos h2 {
     font-size: 30px;
@@ -547,14 +561,6 @@ span {
   .projetos-lista {
     width: 220px;
     height: 150px;
-  }
-
-  .projetos-lista:hover img {
-   filter: brightness(100%);
-  }
-
-  .projetos-lista:hover dd {
-   display: none;
   }
 
   .contato  {
