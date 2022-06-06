@@ -537,7 +537,7 @@ span {
   }
 
 .projetos{
-  height: 100vh;
+  height: 120vh;
 }
 
   .projetos h2 {
@@ -549,8 +549,12 @@ span {
     height: 150px;
   }
 
+  .projetos-lista:hover img {
+   filter: brightness(100%);
+  }
+
   .projetos-lista:hover dd {
-    display: none;
+   display: none;
   }
 
   .contato  {
