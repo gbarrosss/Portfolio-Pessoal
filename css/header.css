@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.header span {
+  font-family: "Hammersmith One";
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: lowercase;
+  color: #ffffff;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.header-menu a {
+  font-family: "Hammersmith One";
+  display: inline-block;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 18px;
+  position: relative;
+  color: #ffffff;
+}
+
+.header-menu a::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 5px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 30px;
+  transition: 0.8s;
+}
+
+.header-menu a:hover::before {
+  width: 100%;
+}
+
+@media(max-width:1000px){
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-menu {
+    gap: 20px;
+    padding: 4px;
+    justify-content: center;
+  }
+
+  .header-menu a {
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #00171f;
+    padding: 4px;
+  }
+
+  .header-menu a::before {
+    display: none;
+  }
+}
+@media(max-width:600px){
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-menu {
+    flex-direction: row;
+    gap: 15px;
+    place-items: center;
+  }
+
+  .header-menu a {
+    font-size: 12px;
+  }
+}

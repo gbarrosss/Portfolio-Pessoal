@@ -1,0 +1,81 @@
+.competencias {
+  font-family: "Hammersmith One";
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr auto auto 1fr; 
+  height: 100vh;
+  gap: 10px;
+  background-color: #ffffff;
+}
+
+.competencias h2 {
+  grid-column: 2;
+  grid-row: 2; 
+  text-align: center;
+  font-size: 50px;
+  color: #003459;
+  text-transform: uppercase;
+  padding: 50px;
+}
+
+.competencias-lista {
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  place-content: center;
+}
+
+.competencias-lista img {
+  background-color: #003459;
+  border-radius: 4px;
+  padding: 20px;
+  /* margin: 10px; */
+  transition: 0.8s;
+}
+
+.competencias-lista img:hover {
+  background-color: #00a8e8;
+}
+
+.competencias-lista h3 {
+  text-align: center;
+  color: #003459;
+  font-family: "calibri";
+  font-weight: 700;
+}
+
+@media(max-width:100px){
+  .competencias-lista {
+    gap: 25px;
+  }
+
+  .competencias-lista img {
+    width: 70px;
+    height: 70px;
+  } 
+}
+@media(max-width:600px){
+  .competencias {
+    grid-template-columns:  1fr ;
+  }
+  .competencias h2 {
+    font-size: 30px;
+  }
+
+  .competencias-lista {
+    gap: 15px;
+  }
+
+  .competencias-lista img {
+    width: 50px;
+    height: 50px;
+    flex-direction: row;
+  }
+
+  .competencias-lista h3 {
+    font-size: 12px;
+  }
+}

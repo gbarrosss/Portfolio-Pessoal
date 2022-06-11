@@ -1,0 +1,126 @@
+.footer {
+  font-family: "Hammersmith One";
+  background-color: #ffffff;
+}
+
+.contato {
+  display: grid;
+  grid-template-columns: 6fr 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr  1fr;
+  height: 50vh;
+  gap: 10px;
+}
+
+.contato,
+p {
+  grid-column: 1;
+  grid-row: 2;
+  text-align: right;
+}
+
+.contato-meios {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.contato-lista span {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-self: start;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.contato-meios,
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.contato,
+span {
+  grid-column: 3;
+  grid-row: 3;
+  text-align: left;
+}
+
+.contato-local {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.autor {
+  display: flex;
+  justify-content: center;
+}
+
+.autor a {
+  color: #00a8e8;
+}
+
+@media(max-width:1000px){
+  .contato {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    max-height: auto;
+  }
+
+  .contato p {
+    grid-row: 1;
+    grid-column: 1/-1;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .contato-meios {
+    grid-column: 1;
+  }
+
+  .contato-lista{
+    color: #00a8e8;
+  }
+
+  .contato-lista span {
+    grid-column: 1/-1;
+    flex-direction: row;
+  }
+
+  .contato img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contato,
+  span {
+    grid-column: 1/-1;
+    grid-row: 4;
+    text-align: left;
+  }
+
+  .contato span img {
+    display: none;
+  }
+
+  .contato-local {
+    grid-row: 3; 
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media(max-width:600px){
+  .contato {
+    font-size: 12px;
+  }
+
+  .contato-meios {
+    grid-column: 1/-1;
+  }
+
+  .autor {
+    font-size: 10px;
+  }
+}
